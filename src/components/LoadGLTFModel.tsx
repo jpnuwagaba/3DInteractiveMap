@@ -7,9 +7,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 // import Model from './Model'
 
 
-const ThreeDWebMap = () => {
+const LoadGLTFModel = () => {
   const gltf = useLoader(GLTFLoader, './model.gltf')
   return <primitive object={gltf}/>
 }
 
-export default ThreeDWebMap
+export default LoadGLTFModel
