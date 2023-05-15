@@ -7,48 +7,23 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {
-  const groupRef = useRef();
   const { nodes, materials } = useGLTF('/model.gltf')
-
-  const position = [32.568438, 0, 0.334500];
-
   return (
-    <group {...props} dispose={null} ref={groupRef} position={position} rotation={[0, 0, 0]}>
-      <group position={[-4.09, 0, 6.82]} rotation={[0, 1.15, 0]}>
-        <mesh geometry={nodes.Heather_1.geometry} material={materials.Heather_Shirt} />
-        <mesh geometry={nodes.Heather_2.geometry} material={materials.Heather_PantShadow} />
-        <mesh geometry={nodes.Heather_3.geometry} material={materials.Heather_Band} />
-        <mesh geometry={nodes.Heather_4.geometry} material={materials.Heather_Stripe1} />
-        <mesh geometry={nodes.Heather_5.geometry} material={materials.Heather_Stripe2} />
-        <mesh geometry={nodes.Heather_6.geometry} material={materials.Heather_Hair} />
-        <mesh geometry={nodes.Heather_7.geometry} material={materials.Heather_Soles} />
-        <mesh geometry={nodes.Heather_8.geometry} material={materials.Heather_Jeans} />
-        <mesh geometry={nodes.Heather_9.geometry} material={materials.Heather_Hat} />
-        <mesh geometry={nodes.Heather_10.geometry} material={materials.Heather_Cuffs} />
-        <mesh geometry={nodes.Heather_11.geometry} material={materials.Heather_Shoes} />
-        <mesh geometry={nodes.Heather_12.geometry} material={materials.Heather_Brim} />
-        <mesh geometry={nodes.Heather_13.geometry} material={materials.Heather_Hair2} />
-        <mesh geometry={nodes.Heather_14.geometry} material={materials.Heather_ShirtShadow} />
-        <mesh geometry={nodes.Heather_15.geometry} material={materials.Heather_Skin} />
-        <mesh geometry={nodes.Heather_16.geometry} material={materials.Lily_Blonde} />
-        <mesh geometry={nodes.Heather_17.geometry} material={materials.Lily_Light} />
-        <mesh geometry={nodes.Heather_18.geometry} material={materials.Lily_Dark} />
-        <mesh geometry={nodes.Heather_19.geometry} material={materials.Heather_Brim1} />
-      </group>
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[560.13, 0.07, -396.92]} rotation={[0, -0.98, 0]} scale={0.28} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion001.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[572.8, 0.07, -364.43]} rotation={[0, -0.98, 0]} scale={0.28} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion002.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[595.54, 0.07, -387.86]} rotation={[0, -0.98, 0]} scale={0.28} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion003.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[901.37, 0.07, -326.79]} rotation={[0, -0.98, 0]} scale={0.28} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion004.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[934.5, 0.07, -328.49]} rotation={[0, -0.98, 0]} scale={0.28} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion005.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[964.91, 0.07, -305.46]} rotation={[0, -0.98, 0]} scale={0.28} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion006.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[965.05, 0.07, -258.66]} rotation={[0, -0.98, 0]} scale={0.28} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1.geometry} material={materials.AM113_048_Acer_platanoides} position={[560.13, 0.07, -396.92]} rotation={[0, -0.98, 0]} scale={0.23} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1001.geometry} material={materials.AM113_048_Acer_platanoides} position={[572.8, 0.07, -364.43]} rotation={[0, -0.98, 0]} scale={0.23} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1002.geometry} material={materials.AM113_048_Acer_platanoides} position={[595.54, 0.07, -387.86]} rotation={[0, -0.98, 0]} scale={0.23} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1003.geometry} material={materials.AM113_048_Acer_platanoides} position={[901.37, 0.07, -326.79]} rotation={[0, -0.98, 0]} scale={0.23} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1004.geometry} material={materials.AM113_048_Acer_platanoides} position={[934.5, 0.07, -328.49]} rotation={[0, -0.98, 0]} scale={0.23} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1005.geometry} material={materials.AM113_048_Acer_platanoides} position={[964.91, 0.07, -305.46]} rotation={[0, -0.98, 0]} scale={0.23} />
-      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1006.geometry} material={materials.AM113_048_Acer_platanoides} position={[965.05, 0.07, -258.66]} rotation={[0, -0.98, 0]} scale={0.23} />
+    <group {...props} dispose={null} scale={0.2}>
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[1950.05, 0.07, -1578.58]} rotation={[0, -0.98, 0]} scale={0.28} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion001.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[1962.72, 0.07, -1546.09]} rotation={[0, -0.98, 0]} scale={0.28} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion002.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[1985.46, 0.07, -1569.52]} rotation={[0, -0.98, 0]} scale={0.28} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion003.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[2291.29, 0.07, -1508.45]} rotation={[0, -0.98, 0]} scale={0.28} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion004.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[2324.42, 0.07, -1510.15]} rotation={[0, -0.98, 0]} scale={0.28} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion005.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[2354.83, 0.07, -1487.12]} rotation={[0, -0.98, 0]} scale={0.28} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion006.geometry} material={materials.AM113_048_Acer_platanoides_Bark} position={[2354.97, 0.07, -1440.32]} rotation={[0, -0.98, 0]} scale={0.28} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1.geometry} material={materials.AM113_048_Acer_platanoides} position={[1950.05, 0.07, -1578.58]} rotation={[0, -0.98, 0]} scale={0.23} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1001.geometry} material={materials.AM113_048_Acer_platanoides} position={[1962.72, 0.07, -1546.09]} rotation={[0, -0.98, 0]} scale={0.23} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1002.geometry} material={materials.AM113_048_Acer_platanoides} position={[1985.46, 0.07, -1569.52]} rotation={[0, -0.98, 0]} scale={0.23} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1003.geometry} material={materials.AM113_048_Acer_platanoides} position={[2291.29, 0.07, -1508.45]} rotation={[0, -0.98, 0]} scale={0.23} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1004.geometry} material={materials.AM113_048_Acer_platanoides} position={[2324.42, 0.07, -1510.15]} rotation={[0, -0.98, 0]} scale={0.23} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1005.geometry} material={materials.AM113_048_Acer_platanoides} position={[2354.83, 0.07, -1487.12]} rotation={[0, -0.98, 0]} scale={0.23} />
+      <mesh geometry={nodes.AM113_048_Acer_platanoides_Defintion1006.geometry} material={materials.AM113_048_Acer_platanoides} position={[2354.97, 0.07, -1440.32]} rotation={[0, -0.98, 0]} scale={0.23} />
       <mesh geometry={nodes.Sketchup_1.geometry} material={materials.Material} />
       <mesh geometry={nodes.Sketchup_2.geometry} material={materials.Material4} />
       <mesh geometry={nodes.Sketchup_3.geometry} material={materials.Material5} />
@@ -57,6 +32,9 @@ export function Model(props) {
       <mesh geometry={nodes.Sketchup_6.geometry} material={materials.Material3} />
       <mesh geometry={nodes.Sketchup_7.geometry} material={materials['[Roofing Scalloped Ornate]']} />
       <mesh geometry={nodes.Sketchup_8.geometry} material={materials['[Grass Dark Green]']} />
+      <mesh geometry={nodes.Sketchup_9.geometry} material={materials.Heather_Hair2} />
+      <mesh geometry={nodes.Sketchup_10.geometry} material={materials['<Black>']} />
+      <mesh geometry={nodes.Sketchup_11.geometry} material={materials.Heather_Shirt} />
     </group>
   )
 }

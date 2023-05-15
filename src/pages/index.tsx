@@ -11,8 +11,8 @@ export default function Home() {
       <Head>
         <title>3D Interactive Map of Makerere University</title>
       </Head>
-      {/* <ModelContainer /> */}
-      <ReactMap />
+      <ModelContainer />
+      {/* <ReactMap /> */}
     </div>
   )
 }

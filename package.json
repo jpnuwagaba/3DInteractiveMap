@@ -20,6 +20,7 @@
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "deck.gl": "^8.9.14",
     "gltfjsx": "^6.1.4",
     "mapbox-gl": "^2.14.1",
     "next": "13.4.1",
