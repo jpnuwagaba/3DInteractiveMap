@@ -7,6 +7,8 @@ import { Suspense } from "react";
 
 import { Model } from './Model'
 import { CollegeLabels } from './College-labels'
+import { HallsLabels } from './Halls-labels'
+import { OpenSpacesLabels } from './Openspaces-labels'
 import TopBar from './TopBar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,6 +17,8 @@ import Switch from '@mui/material/Switch';
 
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
+const MAX_POLAR_ANGLE = 20;
+const MIN_POLAR_ANGLE = 80;
 
 const ModelContainer = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
@@ -31,21 +35,24 @@ const ModelContainer = () => {
             <div className="font-bold text-lg">Places</div>
           </div>
           <div className=" mt-5 flex flex-col gap-3">
-            <div className="rounded border md p-3 w-[200px] cursor-pointer hover:bg-gray-100 flex flex-row items-center justify-between">
+            <div className="rounded border border-cyan-500 md p-3 w-[200px] cursor-pointer hover:bg-gray-100 flex flex-row items-center justify-between">
               <div>Colleges</div>
               <div onClick={() => setToggleCollegesLayer(!toggleCollegesLayer)}><Switch checked={toggleCollegesLayer} {...label} /></div>
             </div>
-            <div className="rounded border md p-3 w-[200px] cursor-pointer hover:bg-gray-100 flex flex-row items-center justify-between">
+            <div className="rounded border border-cyan-500 md p-3 w-[200px] cursor-pointer hover:bg-gray-100 flex flex-row items-center justify-between">
               <div>Halls</div>
               <div onClick={() => setToggleHallsLayer(!toggleHallsLayer)}><Switch checked={toggleHallsLayer} {...label} /></div>
             </div>
-            <div className="rounded border md p-3 w-[200px] cursor-pointer hover:bg-gray-100 flex flex-row items-center justify-between">
+            <div className="rounded border border-cyan-500 md p-3 w-[200px] cursor-pointer hover:bg-gray-100 flex flex-row items-center justify-between">
               <div>Open Spaces</div>
               <div onClick={() => settoggleOpenSpacesLayer(!toggleOpenSpacesLayer)}><Switch checked={toggleOpenSpacesLayer} {...label} /></div>
             </div>
-            <div className="rounded border md p-3 w-[200px] cursor-pointer hover:bg-gray-100 flex flex-row items-center justify-between">
+            <div className="rounded border border-cyan-500 md p-3 w-[200px] cursor-pointer hover:bg-gray-100">
+              <div className="flex flex-row items-center justify-between">
               <div>Hangout Spots</div>
-              <div onClick={() => setToggleHallsLayer(!toggleHangoutSpotsLayer)}><Switch checked={toggleHangoutSpotsLayer} {...label} /></div>
+              <div onClick={() => setToggleHangoutSpotsLayer(!toggleHangoutSpotsLayer)}><Switch checked={toggleHangoutSpotsLayer} {...label} /></div>
+              </div>
+              <div className="tet-sm font-bold text-gray-700 italic">Not Available</div>
             </div>
           </div>
         </div>
@@ -65,32 +72,22 @@ const ModelContainer = () => {
         <MapControls
           enableDamping
           dampingFactor={0.1}
-          maxPolarAngle={Math.PI / 3}
-          autoRotate={true} autoRotateSpeed={0.2}
-          target={[0, 0, 0]} // Camera points at the origin
+          maxPolarAngle={Math.PI / 2.4}
+          autoRotate={true} 
+          autoRotateSpeed={0.2}
+          // target={[0, 0, 0]} 
           minDistance={50} // Set minimum zoom level
           maxDistance={270} // Set maximum zoom level
-        />
-        <OrbitControls
-          enableZoom={true}
-          enablePan={true}
-          enableRotate={true}
         />
         <Suspense fallback={null}>
           <mesh position={[-400, 0, 400]} rotation={[0, 0, 0]}>
             <Model />
-            <mesh position={toggleCollegesLayer ? [0, 0, 0] : [0, 200, 0]}><CollegeLabels /></mesh>
+            <mesh position={toggleCollegesLayer ? [0, 0, 0] : [0, 300, 0]}><CollegeLabels /></mesh>
+            <mesh position={toggleHallsLayer ? [0, 0, 0] : [0, 300, 0]}><HallsLabels /></mesh>
+            <mesh position={toggleOpenSpacesLayer ? [0, 0, 0] : [0, 300, 0]}><OpenSpacesLabels /></mesh>
           </mesh>
         </Suspense>
         {/* <gridHelper args={[20, 20, 0xff0000, 'teal']} /> */}
-      </Canvas>
-
-      <Canvas>
-        <pointLight position={[10, 10, 10]} />
-        <mesh position={toggleCollegesLayer ? [0, 0, 0] : [0, 2, 0]}>
-          <sphereGeometry />
-          <meshStandardMaterial color="hotpink" />
-        </mesh>
       </Canvas>
 
       <TopBar />
