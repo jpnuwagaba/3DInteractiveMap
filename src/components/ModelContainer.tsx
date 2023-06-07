@@ -12,7 +12,7 @@ import { OpenSpacesLabels } from './Openspaces-labels'
 import TopBar from './TopBar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faLayerGroup } from '@fortawesome/free-solid-svg-icons'
 import Switch from '@mui/material/Switch';
 
 
@@ -71,13 +71,15 @@ const ModelContainer = () => {
         <directionalLight position={[0, 10, 5]} intensity={0.5} />
         <MapControls
           enableZoom={true}
-          zoomSpeed={0.5}
+          zoomSpeed={1.4}
           enablePan={true}
           panSpeed={1.4}
           enableRotate={true}
           rotateSpeed={1.4}
           minZoom={50}
           maxZoom={270}
+          minDistance={50}
+          maxDistance={270}
           minPolarAngle={Math.PI / 9}
           maxPolarAngle={Math.PI / 2.4}
           // minAzimuthAngle={-Math.PI / 4}
@@ -110,7 +112,7 @@ const ModelContainer = () => {
 
       <TopBar />
       <div onClick={() => setToggleMenu(!toggleMenu)} className='fixed right-6 md:right-10 top-5 cursor-pointer'>
-        {toggleMenu ? <FontAwesomeIcon icon={faChevronLeft} size="xl" /> : <FontAwesomeIcon icon={faChevronRight} size="xl" />}
+        {toggleMenu ? <FontAwesomeIcon icon={faLayerGroup} size="xl" /> : <FontAwesomeIcon icon={faLayerGroup} size="xl" />}
       </div>
       <div style={{ display: toggleMenu ? 'none' : 'block' }}><Menu /></div>
     </div>
