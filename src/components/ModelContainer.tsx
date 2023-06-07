@@ -70,24 +70,32 @@ const ModelContainer = () => {
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 10, 5]} intensity={0.5} />
         <MapControls
-          enableDamping
-          dampingFactor={0.1}
-          maxPolarAngle={Math.PI / 3}
-          autoRotate={true} 
-          autoRotateSpeed={0.3}
-          // target={[0, 0, 0]} 
-          minDistance={50} // Set minimum zoom level
-          maxDistance={250} // Set maximum zoom level
+          enableZoom={true}
+          zoomSpeed={0.5}
+          enablePan={true}
+          panSpeed={0.8}
+          enableRotate={true}
+          rotateSpeed={0.6}
+          minZoom={50}
+          maxZoom={270}
+          minPolarAngle={0}
+          maxPolarAngle={Math.PI / 2.4}
+          // minAzimuthAngle={-Math.PI / 4}
+          // maxAzimuthAngle={Math.PI / 4}
         />
         <OrbitControls 
-          enableDamping
-          dampingFactor={0.1}
+          enableZoom={true}
+          zoomSpeed={0.5}
+          enablePan={true}
+          panSpeed={0.8}
+          enableRotate={true}
+          rotateSpeed={0.6}
+          minDistance={50}
+          maxDistance={270}
+          minPolarAngle={0}
           maxPolarAngle={Math.PI / 2.4}
-          autoRotate={true} 
-          autoRotateSpeed={0.3}
-          // target={[0, 0, 0]} 
-          minDistance={50} // Set minimum zoom level
-          maxDistance={250} // Set maximum zoom level
+          // minAzimuthAngle={-Math.PI / 4}
+          // maxAzimuthAngle={Math.PI / 4}
         />
         <Suspense fallback={null}>
           <mesh position={[-400, 0, 400]} rotation={[0, 0, 0]}>
