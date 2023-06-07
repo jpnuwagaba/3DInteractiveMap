@@ -78,12 +78,12 @@ const ModelContainer = () => {
           rotateSpeed={0.6}
           minZoom={50}
           maxZoom={270}
-          minPolarAngle={0}
+          minPolarAngle={Math.PI / 9}
           maxPolarAngle={Math.PI / 2.4}
           // minAzimuthAngle={-Math.PI / 4}
           // maxAzimuthAngle={Math.PI / 4}
         />
-        <OrbitControls 
+        {/* <OrbitControls 
           enableZoom={true}
           zoomSpeed={0.5}
           enablePan={true}
@@ -92,11 +92,11 @@ const ModelContainer = () => {
           rotateSpeed={0.6}
           minDistance={50}
           maxDistance={270}
-          minPolarAngle={0}
+          minPolarAngle={Math.PI / 9}
           maxPolarAngle={Math.PI / 2.4}
           // minAzimuthAngle={-Math.PI / 4}
           // maxAzimuthAngle={Math.PI / 4}
-        />
+        /> */}
         <Suspense fallback={null}>
           <mesh position={[-400, 0, 400]} rotation={[0, 0, 0]}>
             <Model />
