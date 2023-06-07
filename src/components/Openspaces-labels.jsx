@@ -17,9 +17,13 @@ export function OpenSpacesLabels(props) {
   })
   return (
     <group {...props} dispose={null} scale={0.2}>
-      <mesh geometry={nodes['G-__555645'].geometry} material={materials.Heather_Shirt} position={[1734.03, 11.31, -1361.33]}><Text fontSize={7} color={'brown'} fontWeight={'bold'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555654'].geometry} material={materials.Heather_Shirt} position={[1968.04, 11.49, -1910.13]}><Text fontSize={7} color={'brown'} fontWeight={'bold'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555663'].geometry} material={materials.Heather_Shirt} position={[2275.27, 13.75, -2295.94]}><Text fontSize={7} color={'brown'} fontWeight={'bold'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
+      <mesh geometry={nodes['G-__555645'].geometry} material={materials.Heather_Shirt} position={[1734.03, 11.31, -1361.33]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Main Football Pitch</Text></mesh>
+      <mesh geometry={nodes['G-__555654'].geometry} material={materials.Heather_Shirt} position={[1968.04, 11.49, -1910.13]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Freedom Square</Text></mesh>
+      <mesh geometry={nodes['G-__555663'].geometry} material={materials.Heather_Shirt} position={[2275.27, 13.75, -2295.94]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Impis Rugby Grounds</Text></mesh>
+
+      {/* <mesh geometry={nodes['G-__555645'].geometry} material={materials.Heather_Shirt} position={[1734.03, 11.31, -1361.33]}></mesh>
+      <mesh geometry={nodes['G-__555654'].geometry} material={materials.Heather_Shirt} position={[1968.04, 11.49, -1910.13]}></mesh>
+      <mesh geometry={nodes['G-__555663'].geometry} material={materials.Heather_Shirt} position={[2275.27, 13.75, -2295.94]}></mesh> */}
     </group>
   )
 }

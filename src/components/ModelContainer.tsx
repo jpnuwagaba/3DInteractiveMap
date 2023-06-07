@@ -72,12 +72,22 @@ const ModelContainer = () => {
         <MapControls
           enableDamping
           dampingFactor={0.1}
-          maxPolarAngle={Math.PI / 2.4}
+          maxPolarAngle={Math.PI / 3}
           autoRotate={true} 
-          autoRotateSpeed={0.2}
+          autoRotateSpeed={0.3}
           // target={[0, 0, 0]} 
           minDistance={50} // Set minimum zoom level
-          maxDistance={270} // Set maximum zoom level
+          maxDistance={250} // Set maximum zoom level
+        />
+        <OrbitControls 
+          enableDamping
+          dampingFactor={0.1}
+          maxPolarAngle={Math.PI / 2.4}
+          autoRotate={true} 
+          autoRotateSpeed={0.3}
+          // target={[0, 0, 0]} 
+          minDistance={50} // Set minimum zoom level
+          maxDistance={250} // Set maximum zoom level
         />
         <Suspense fallback={null}>
           <mesh position={[-400, 0, 400]} rotation={[0, 0, 0]}>

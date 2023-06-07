@@ -17,15 +17,25 @@ export function HallsLabels(props) {
   })
   return (
     <group {...props} dispose={null} scale={0.2}>
-      <mesh geometry={nodes['G-__555564'].geometry} material={materials.Heather_PantShadow} position={[1931.17, 33.67, -2406.13]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555573'].geometry} material={materials.Heather_PantShadow} position={[2051.11, 33.22, -2315.54]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555582'].geometry} material={materials.Heather_PantShadow} position={[2119.85, 30.42, -2103.81]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555591'].geometry} material={materials.Heather_PantShadow} position={[2189.43, 34.08, -2102.97]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555600'].geometry} material={materials.Heather_PantShadow} position={[2217.4, 42.15, -1883.55]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555609'].geometry} material={materials.Heather_PantShadow} position={[2423.12, 30.68, -1788.92]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555618'].geometry} material={materials.Heather_PantShadow} position={[2192.16, 20.82, -1445.89]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555627'].geometry} material={materials.Heather_PantShadow} position={[1803.91, 43.38, -1563.8]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
-      <mesh geometry={nodes['G-__555636'].geometry} material={materials.Heather_PantShadow} position={[1734.74, 30.93, -1646.8]}><Text fontSize={7} color={'brown'} style={{ fontWeight: 'bold', fontStyle: 'italic' }} position={[10, 25, -9]} ref={(ref) => labelsRef.current[0] = ref}>Label</Text></mesh>
+      <mesh geometry={nodes['G-__555564'].geometry} material={materials.Heather_PantShadow} position={[1931.17, 33.67, -2406.13]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Livingstone Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555573'].geometry} material={materials.Heather_PantShadow} position={[2051.11, 33.22, -2315.54]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Africa Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555582'].geometry} material={materials.Heather_PantShadow} position={[2119.85, 30.42, -2103.81]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Nkrumah Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555591'].geometry} material={materials.Heather_PantShadow} position={[2189.43, 34.08, -2102.97]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Nsibirwa Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555600'].geometry} material={materials.Heather_PantShadow} position={[2217.4, 42.15, -1883.55]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Mitchell Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555609'].geometry} material={materials.Heather_PantShadow} position={[2423.12, 30.68, -1788.92]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>University Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555618'].geometry} material={materials.Heather_PantShadow} position={[2192.16, 20.82, -1445.89]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Complex Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555627'].geometry} material={materials.Heather_PantShadow} position={[1803.91, 43.38, -1563.8]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Mary Stuart Hall</Text></mesh>
+      <mesh geometry={nodes['G-__555636'].geometry} material={materials.Heather_PantShadow} position={[1734.74, 30.93, -1646.8]}><Text fontSize={7} maxWidth={100} textAlign='center' color={'black'} position={[10, 30, -9]} ref={(ref) => labelsRef.current[0] = ref}>Lumumba Hall</Text></mesh>
+
+      {/* <mesh geometry={nodes['G-__555564'].geometry} material={materials.Heather_PantShadow} position={[1931.17, 33.67, -2406.13]}></mesh>
+      <mesh geometry={nodes['G-__555573'].geometry} material={materials.Heather_PantShadow} position={[2051.11, 33.22, -2315.54]}></mesh>
+      <mesh geometry={nodes['G-__555582'].geometry} material={materials.Heather_PantShadow} position={[2119.85, 30.42, -2103.81]}></mesh>
+      <mesh geometry={nodes['G-__555591'].geometry} material={materials.Heather_PantShadow} position={[2189.43, 34.08, -2102.97]}></mesh>
+      <mesh geometry={nodes['G-__555600'].geometry} material={materials.Heather_PantShadow} position={[2217.4, 42.15, -1883.55]}></mesh>
+      <mesh geometry={nodes['G-__555609'].geometry} material={materials.Heather_PantShadow} position={[2423.12, 30.68, -1788.92]}></mesh>
+      <mesh geometry={nodes['G-__555618'].geometry} material={materials.Heather_PantShadow} position={[2192.16, 20.82, -1445.89]}></mesh>
+      <mesh geometry={nodes['G-__555627'].geometry} material={materials.Heather_PantShadow} position={[1803.91, 43.38, -1563.8]}></mesh>
+      <mesh geometry={nodes['G-__555636'].geometry} material={materials.Heather_PantShadow} position={[1734.74, 30.93, -1646.8]}></mesh> */}
     </group>
   )
 }
