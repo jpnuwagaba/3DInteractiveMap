@@ -73,9 +73,9 @@ const ModelContainer = () => {
           enableZoom={true}
           zoomSpeed={0.5}
           enablePan={true}
-          panSpeed={0.8}
+          panSpeed={1.4}
           enableRotate={true}
-          rotateSpeed={0.6}
+          rotateSpeed={1.4}
           minZoom={50}
           maxZoom={270}
           minPolarAngle={Math.PI / 9}
