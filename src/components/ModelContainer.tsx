@@ -9,6 +9,7 @@ import { Model } from './Model'
 import { CollegeLabels } from './College-labels'
 import { HallsLabels } from './Halls-labels'
 import { OpenSpacesLabels } from './Openspaces-labels'
+import {RoadsLabels} from './Roads-labels'
 import TopBar from './TopBar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -102,6 +103,7 @@ const ModelContainer = () => {
         <Suspense fallback={null}>
           <mesh position={[-400, 0, 400]} rotation={[0, 0, 0]}>
             <Model />
+            <mesh><RoadsLabels /></mesh>
             <mesh position={toggleCollegesLayer ? [0, 0, 0] : [0, 300, 0]}><CollegeLabels /></mesh>
             <mesh position={toggleHallsLayer ? [0, 0, 0] : [0, 300, 0]}><HallsLabels /></mesh>
             <mesh position={toggleOpenSpacesLayer ? [0, 0, 0] : [0, 300, 0]}><OpenSpacesLabels /></mesh>
