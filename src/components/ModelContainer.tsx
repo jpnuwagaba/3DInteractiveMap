@@ -10,6 +10,7 @@ import { CollegeLabels } from './College-labels'
 import { HallsLabels } from './Halls-labels'
 import { OpenSpacesLabels } from './Openspaces-labels'
 import {RoadsLabels} from './Roads-labels'
+import {Trees} from './Trees'
 import TopBar from './TopBar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -78,9 +79,9 @@ const ModelContainer = () => {
           enableRotate={true}
           rotateSpeed={1.4}
           minZoom={50}
-          maxZoom={270}
+          maxZoom={230}
           minDistance={50}
-          maxDistance={270}
+          maxDistance={230}
           minPolarAngle={Math.PI / 9}
           maxPolarAngle={Math.PI / 2.4}
           // minAzimuthAngle={-Math.PI / 4}
@@ -104,6 +105,7 @@ const ModelContainer = () => {
           <mesh position={[-400, 0, 400]} rotation={[0, 0, 0]}>
             <Model />
             <mesh><RoadsLabels /></mesh>
+            <mesh><Trees /></mesh>
             <mesh position={toggleCollegesLayer ? [0, 0, 0] : [0, 300, 0]}><CollegeLabels /></mesh>
             <mesh position={toggleHallsLayer ? [0, 0, 0] : [0, 300, 0]}><HallsLabels /></mesh>
             <mesh position={toggleOpenSpacesLayer ? [0, 0, 0] : [0, 300, 0]}><OpenSpacesLabels /></mesh>
